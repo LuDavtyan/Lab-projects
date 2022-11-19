@@ -1,0 +1,67 @@
+.navPage{
+    margin-top: 80px;
+    margin-left: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.allow label{
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.allow input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.allow p {
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+    color: #FFFFFF;
+    font-size: 20px;
+    margin-top: 80px;
+}
+
+.allow select{
+    width: 200px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.list{
+    width: 380px;
+    height: 180px;
+    border: 1px solid #FFFFFF;
+    margin-top: 20px;
+}
+
+.ignored-list{
+    margin-top: 100px;
+}
+
+.ignored-list input{
+    width: 340px;
+    height: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+}
+
+.ignored-list button{
+    width: 25px;
+    height: 25px;
+    background-color: #dea4d8;
+    border:  none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.test {
+    color: #FF2D95;
+}
+
+a{
+    text-decoration: none;
+}

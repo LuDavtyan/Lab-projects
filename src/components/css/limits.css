@@ -1,0 +1,70 @@
+.navLimitPage{
+    margin-top: 30px;
+    margin-left: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.limit p {
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+    color: #FFFFFF;
+    font-size: 20px;
+    margin-top: 50px;
+    
+}
+
+.sitName{
+    width: 380px;
+    height: 25px;
+    margin-right: 20px;
+    padding-left: 5px;
+    margin-top: 20px;
+}
+
+.time{
+    width: 100px;
+    height: 25px;
+    margin-right: 20px;
+    padding-left: 5px;
+}
+
+.addBtn{
+    width: 25px;
+    height: 25px;
+    background-color: #dea4d8;
+    border:  none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.nameList{
+   width: 545px;
+   height: 280px;
+   border: #FFFFFF 1px solid;
+   margin-top: 30px ;
+}
+
+.addInput{
+    display: flex;
+}
+
+.addInput input {
+    width: 486px;
+    height: 33px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    background-color: #3B1F44; 
+    padding-left: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    
+}
+
+.delete{
+    font-size: 30px;
+    color: #FFFFFF;
+    padding-top: 3px;
+    padding-left: 5px;
+}

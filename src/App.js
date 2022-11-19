@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header/header";
+import Settings from "./components/settings/settings";
+import Limits from "./components/limits/limits";
+import Days from "./components/days/days";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter> 
+       <div >
+         <Header/>
+       
+            <Routes>
+               <Route path="settings" element={<Settings/>}/>
+               <Route path="limits" element={<Limits/>}/>
+               <Route path="/*" element={<Days/>}/>
+            </Routes> 
+          
+         </div>
+    </BrowserRouter>
   );
 }
 
 export default App;
+ 
