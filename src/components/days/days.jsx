@@ -10,21 +10,31 @@ import Today from "./today";
 import ByDays from "./byDays";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-  
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+
+ChartJS.register(ArcElement, Tooltip, Legend);
+
   
 const Days = () => {
     const setActive = ({isActive}) => isActive ? '' : '';
+    
     const name = useSelector(state => {
         const { limitsReducer } = state;
         return limitsReducer.name
     })
 
-   /* const [webData, setWebData] = useState({
-     labels:  ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    const time = useSelector(state => {
+      const { timeReducer } = state;
+      return  timeReducer.time 
+    })
+
+
+  const [webData, setWebData] = useState({
+     labels:  name.map((data)=> data.text),
         datasets: [
           {
-            label: 'Web page names',
-            data: [12, 19, 3, 5, 2, 3],
+            label: name.map((data)=> data.text) ,
+            data: time.map((res) => res.time),
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',
@@ -45,7 +55,7 @@ const Days = () => {
           },
         ],
 
-    })*/
+    })
 
 
 
@@ -54,17 +64,21 @@ const Days = () => {
 
     return(
         <div className="container">
-            <div className="days"> 
-          
-                <NavLink className={setActive} to="/today"><li>TODAY</li>  </NavLink>
-                <NavLink className={setActive} to="/bydays"><li>BY DAYS</li> </NavLink>
-                <NavLink className={setActive} to="/settings"><li>SETTINGS</li> </NavLink>
-
-                <Routes>
+            <div className="daysChart"> 
+                <div className="days">
+                    <NavLink className={setActive} to="/today"><li>TODAY</li>  </NavLink>
+                    <NavLink className={setActive} to="/bydays"><li>BY DAYS</li> </NavLink>
+                    <NavLink className={setActive} to="/settings"><li>SETTINGS</li> </NavLink>
+                </div>
+              
+            <div>
+                 <Routes>
                     <Route path="settings" element={<Settings/>}/>
                     <Route path="/byDays" element={<ByDays/>}/>
-                    <Route path="/today" element={<Today  />}/>
-               </Routes> 
+                    <Route path="/today" element={<Today data={webData} />}/>
+                 </Routes> 
+            </div>
+             
             </div>
         </div>
     )

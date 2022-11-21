@@ -6,13 +6,17 @@ import {
     LIMITS_TEXT_CREATE,
     WEB_NAME_UPDATE,
     WEB_NAME_DELETE,
+
+    TIME_TEXT_CREATE,
+    TIME_TEXT_DELETE
 } from './types';
 
 
-export function settingsCreate(text, id){
+export function settingsCreate(text, id, ){
     return{
         type: SETTINGS_CREATE,
-        data: {text, id}
+        data: {text, id},
+
     }
 }
 
@@ -49,5 +53,21 @@ export function webNameDelete( id){
     return{
         type: WEB_NAME_DELETE,
         id
+    }
+}
+
+
+export function timeTextCreate( time){
+    return{
+        type: TIME_TEXT_CREATE,
+        data: {time}
+    }
+}
+
+
+export function timeTextDelete(timeId ){
+    return{
+        type: TIME_TEXT_DELETE ,
+        timeId 
     }
 }

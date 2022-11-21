@@ -1,10 +1,17 @@
 import { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { webNameUpdate, webNameDelete} from '../../redux/actions'
+import Time from './time';
 
 function SingleLimits({data}) {
     const [webPageName, setWebPageName] = useState('')
-    const {text, id } = data;
+    const {text, id} = data;
+   
+    const time = useSelector(state => {
+        const { timeReducer } = state;
+        return  timeReducer.time 
+    })
+   
 
     const dispatch = useDispatch();
     
@@ -30,7 +37,10 @@ function SingleLimits({data}) {
                 <input type='text' 
                     value={webPageName} 
                     onChange={handleInput}/>
-                <div  onClick={handleDelete} className='delete' >&times;</div>
+                     {!!time.length &&  time.map(res=>{
+                            return  <Time key={res.id} data={res} />
+                      })}
+                   <div  onClick={handleDelete} className='delete' >&times;</div>   
            </div>
         </form>
     )

@@ -5,7 +5,7 @@ import {
 } from './types';
   
 const initialState = {
-    name: []
+    name: [],
 }
 
 export const limitsReducer = (state = initialState, action) => {
@@ -14,19 +14,22 @@ export const limitsReducer = (state = initialState, action) => {
       case LIMITS_TEXT_CREATE:
             return{
                 ...state,
-                name: [...state.name, action.data]
+                name: [...state.name, action.data],
             }
 
       case WEB_NAME_UPDATE:
             const { data } = action;
             const { name } = state;
+           
+
             const itemIndex = name.findIndex(res => res.id === data.id)
-            
+           
             const nextName = [
                 ...name.slice(0, itemIndex),
                 data,
                 ...name.slice(itemIndex + 1)
             ];
+
 
             return{
                 ...state,

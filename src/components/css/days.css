@@ -1,11 +1,18 @@
 .days{
+  
+    height: auto;
     margin-top: 30px;
     margin-left: 80px;
     display: flex;
     justify-content: center;
 }
 
-
+.daysChart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
 .days a {
     text-decoration: none;
     list-style: none;
@@ -14,4 +21,17 @@
     font-size: 20px;
     margin-right: 30px;
   
+}
+
+.doughnut{
+    width: 500px;
+   display: flex;
+   justify-content: center;
+   margin-top: 50px;
+   margin-left: 300px;
+   
+}
+
+.todayList{
+    display: flex;
 }

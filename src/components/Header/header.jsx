@@ -18,7 +18,7 @@ const Header  = () => {
                   <ul>
                      <NavLink className={setActive} to="/settings"><li>Settings</li>  </NavLink>
                      <NavLink className={setActive} to="/limits"><li>Limits</li> </NavLink>
-                     <NavLink className={setActive} to="/days"><li>Days</li> </NavLink>
+                     <NavLink className={setActive} to="/today"><li>Days</li> </NavLink>
                   </ul>
               </nav>
             </div>       
