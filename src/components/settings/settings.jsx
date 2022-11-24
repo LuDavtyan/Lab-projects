@@ -25,6 +25,7 @@ const Settings = () => {
     e.preventDefault();
     const id = uniqid()
     dispatch(settingsCreate(sitName, id))
+    setSitName('')
   }
 
 

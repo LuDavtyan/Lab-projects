@@ -2,7 +2,7 @@
   
     height: auto;
     margin-top: 30px;
-    margin-left: 80px;
+    margin-left: 23px;
     display: flex;
     justify-content: center;
 }
@@ -33,5 +33,42 @@
 }
 
 .todayList{
+    width: 727px;
+    height: auto;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #FFFFFF;
+    margin: 0 auto;
+     
 }
+
+.timeList{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    margin-top: 10px;
+    margin: 0  auto;
+    margin-top: 15px;
+
+}
+
+.timeList h2{
+    color: #FFFFFF;
+}
+
+.webTime{
+    display: flex;
+    font-size: 25px;
+    border-bottom: #FFFFFF 1px solid;
+    margin-bottom: 10px;
+ 
+}
+
+.dataName{
+  font-size: 25px;
+  border-bottom: #FFFFFF 1px solid;
+  margin-bottom: 10px;
+ 
+}
+

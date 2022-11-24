@@ -7,6 +7,7 @@ import {
 
 const initialState = {
     time: [],
+    minute: []
 }
 export const timeReducer = (state = initialState, action) => {
 
@@ -15,6 +16,7 @@ export const timeReducer = (state = initialState, action) => {
               return{
                   ...state,
                   time: [...state.time, action.data],
+                  minute: [...state.minute, action.data]
               }
   
         case TIME_TEXT_UPDATE:

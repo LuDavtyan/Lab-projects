@@ -15,30 +15,51 @@ const Today = ({data}) => {
       return  timeReducer.time 
     })
 
+    const minute = useSelector(state => {
+        const { minuteReducer } = state;
+        return  minuteReducer.minute
+    })
 
-
+   
     return (
         <div className="container">
             <div className='doughnut'>
                 <Doughnut data={data} />   
             </div>
-
+           <div className="timeList"> 
             <h2>
-                Today  2 ( {name.length} sites)
+                Today   ( {name.length} sites)
             </h2>
+         
+         </div>
+
+
+
 
           <div className="todayList">
-                <div>
-                {name.map((data)=> 
-                    <div>{data.text}</div> 
-                )}
+          
+                   <div className="dataName">
+                    {name.map((data)=> 
+                            <div>{data.text}</div> 
+                     )}
                 </div>
-                <div>
-                {time.map((data)=> 
-                    <div>{data.time} hh</div> 
-                )}
+                <div className="webTime">
+                    <div> 
+                    {time.map((data)=> 
+                        <div>{data.time} h</div> 
+                    )}
+                    </div>
+                    <div> 
+                    {minute.map((data)=> {
+                        <div>{data.mainute} m</div>
+                    })}
+                    </div>
                 </div>
+           
+             
           </div>
+
+      
         </div>
       
        

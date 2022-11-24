@@ -8,7 +8,9 @@ import {
     WEB_NAME_DELETE,
 
     TIME_TEXT_CREATE,
-    TIME_TEXT_DELETE
+    TIME_TEXT_DELETE,
+
+    MINUTE_TEXT_CREATE,
 } from './types';
 
 
@@ -60,7 +62,16 @@ export function webNameDelete( id){
 export function timeTextCreate( time){
     return{
         type: TIME_TEXT_CREATE,
-        data: {time}
+        data: {time},
+      
+    }
+}
+
+export function munuteTextCreate(minute){
+    return{
+        type:  MINUTE_TEXT_CREATE,
+        data: {minute},
+    
     }
 }
 
